@@ -32,7 +32,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: mendix/docker-mendix-buildpack
-          path: menidx
+          path: mendix
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
