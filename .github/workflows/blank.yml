@@ -49,4 +49,4 @@ jobs:
         run: |
           ls -la $PWD
           ls -la $GITHUB_WORKSPACE
-          ls mendix/all
+          ls mendix/app
