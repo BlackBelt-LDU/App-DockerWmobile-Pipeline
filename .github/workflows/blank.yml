@@ -31,7 +31,7 @@ jobs:
       - name: Checkout tools repo
         uses: actions/checkout@v3
         with:
-          repository: https://github.com/mendix/docker-mendix-buildpack.git
+          repository: mendix/docker-mendix-buildpack
           path: menidx
 
       # Runs a single command using the runners shell
