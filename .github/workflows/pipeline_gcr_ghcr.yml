@@ -27,7 +27,7 @@ jobs:
 
       - name: Login to GCR
         env:
-          PROJECT_ID: service-project-ardhan-1 #create env called PROJECT_ID consisted of our actual GCP Project ID
+          PROJECT_ID: 	bb-ldu #create env called PROJECT_ID consisted of our actual GCP Project ID
         uses: google-github-actions/setup-gcloud@v0.3.0 #checkouts GCR repo, so this workflow can access it
         with:
           service_account_key: ${{ secrets.SERVICE_ACCOUNT_KEY }} #parse the value of repository secret called SERVICE_ACCOUNT_KEY that we have created earlier
@@ -37,6 +37,6 @@ jobs:
       - name: Build Docker Image
         env:
           IMAGE_NAME: linux_tweet_app #create env called IMAGE_NAME consisted of actual name of Docker Image after we build
-          PROJECT_ID: service-project-ardhan-1
+          PROJECT_ID: 	bb-ldu
         run: docker build -t $IMAGE_NAME:latest . #build the docker image
       
