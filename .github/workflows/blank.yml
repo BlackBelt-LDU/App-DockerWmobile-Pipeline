@@ -28,11 +28,17 @@ jobs:
         with:
           path: main
       
-      - name: Checkout tools repo
+      - name: Checkout docker-mendix-buildpack
         uses: actions/checkout@v3
         with:
           repository: mendix/docker-mendix-buildpack
           path: mendix
+
+      - name: Checkout mendix app
+        uses: actions/checkout@v3
+        with:
+          repository: BlackBelt-LDU/App-DockerWmobile
+          path: mendix/app
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -43,4 +49,4 @@ jobs:
         run: |
           ls -la $PWD
           ls -la $GITHUB_WORKSPACE
-          ls mendix
+          ls mendix/all
