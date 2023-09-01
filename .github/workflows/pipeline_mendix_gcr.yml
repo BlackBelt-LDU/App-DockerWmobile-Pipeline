@@ -1,4 +1,4 @@
-name: Publish to GCR and GHCR
+name: Publish menidx to GCR
 # create simple trigger based on everytime we make change to this repository
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
