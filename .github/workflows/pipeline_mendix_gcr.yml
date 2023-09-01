@@ -42,7 +42,7 @@ jobs:
           
       - name: Build Docker Image
         env:
-          IMAGE_NAME: App-DockerWmobile #create env called IMAGE_NAME consisted of actual name of Docker Image after we build
+          IMAGE_NAME: app-docker-wmobile #create env called IMAGE_NAME consisted of actual name of Docker Image after we build
           PROJECT_ID: 	bb-ldu
         run: docker build -t $IMAGE_NAME:latest . #build the docker image
 
@@ -53,7 +53,7 @@ jobs:
 
       - name: Push Docker Image to Container Registry GCR
         env: 
-          IMAGE_NAME: App-DockerWmobile
+          IMAGE_NAME: app-docker-wmobile
           PROJECT_ID: bb-ldu
         #tag docker image to gcr image format then push to gcr
         run: |-
